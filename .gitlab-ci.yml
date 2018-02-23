@@ -1,0 +1,31 @@
+stages:
+  - build
+  - deploy
+
+build:docs:
+  image: git.mastersign.de/tk-docker/node-hugo
+  stage: build
+  tags:
+  - docker
+  only:
+  - master
+  script:
+  - yarn install
+  - gulp
+  - cd rig
+  - hugo -d ../public
+  artifacts:
+    paths:
+    - public/
+    expire_in: 1d
+
+deploy:docs:
+  image: git.mastersign.de/tk-docker/lftp
+  stage: deploy
+  tags:
+  - docker
+  only:
+  - master
+  script:
+  - cd public
+  - lftp -u $FTP_USER,$FTP_PASSWORD -e "mirror -R -e; exit" $FTP_TARGET_URL
