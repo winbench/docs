@@ -3,7 +3,7 @@ stages:
   - deploy
 
 build:docs:
-  image: git.mastersign.de/tk-docker/node-hugo
+  image: docker-registry.mastersign.de/tk-docker/node-hugo
   stage: build
   tags:
   - docker
@@ -20,7 +20,7 @@ build:docs:
     expire_in: 1d
 
 deploy:docs:
-  image: git.mastersign.de/tk-docker/lftp
+  image: docker-registry.mastersign.de/tk-docker/lftp
   stage: deploy
   tags:
   - docker
