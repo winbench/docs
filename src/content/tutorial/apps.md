@@ -11,6 +11,7 @@ weight = 2
 [App Activation List]: /ref/file-structure/#config-apps-activated
 [User App Library]: /ref/file-structure/#config-apps
 [Bench CLI]: /ref/bench-cli
+[Apps]: https://apps.winbench.org/
 
 Apps are defined in one of the loaded app libraries or in your custom app library.
 An app definition contains an ID, a download URL or the identifier
@@ -56,7 +57,7 @@ or edit the configuration directly.
 To activate an app on the command line type `bench app activate <ID>`.
 Replace `<ID>` with the ID of the app.
 If you do not know the IDs of the available apps, take a look at
-the [app list](/apps) or run `bench list -t apps -p ID,Label,Version`.
+the [app list][apps] or run `bench list -t apps -p ID,Label,Version`.
 
 Open the [App Activation List][] `config\apps-activated.txt`
 in you favorite text editor.
@@ -100,6 +101,6 @@ Tech Guides
 
 Reference Docs
 
-* [App Library](/apps)
+* [App Library][apps]
 * [File Structure](/ref/file-structure)
 * [Bench Dashboard](/ref/dashboard)
