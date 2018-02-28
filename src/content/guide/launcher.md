@@ -1,5 +1,5 @@
 +++
-date = "2016-06-22T13:29:04+02:00"
+date = "2018-02-28"
 description = "The accessability of apps through Launchers and the Dashboard"
 title = "Launchers"
 weight = 7
@@ -63,3 +63,17 @@ onto a launcher icon in that toolbar, starts an app or a shell inside of the
 Bench environment with all consequences.
 
 See also: [Drag & Drop Launching](/guide/shell/#drag-and-drop) for shells
+
+## Start Menu Search Integration
+If a Bench environment is used as the main software environment in a Windows
+user profile, see [isolation levels](/guide/isolation#typical-configurations),
+it would be nice, if the apps could be discovered and launched via typing
+in their names in the search feature of the Windows start menu.
+To achieve this, the location of the [launcher directory][] must be changed,
+so that it resides inside the start menu folder of the Windows profile.
+
+Therefore, the configuration property [`LauncherDir`](/ref/config/#LauncherDir)
+must be set to something like this:
+`$AppDataDir$\Microsoft\Windows\Start Menu\Programs\Bench`.
+This requires the configuration property [`OverrideHome`](/ref/config/#OverrideHome)
+to be `false`.
