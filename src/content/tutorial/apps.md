@@ -1,5 +1,5 @@
 +++
-date = "2018-02-09T12:00:00+02:00"
+date = "2018-02-28"
 description = "Activate and install apps in different ways"
 title = "Selecting and Installing Apps"
 weight = 2
@@ -96,7 +96,7 @@ Tech Guides
 
 * [App Activation](/guide/selection)
 * [App Setup and Upgrade](/guide/app-setup)
-* [Launcher](/guide/launcer)
+* [Launcher](/guide/launcher)
 * [Shells](/guide/shell)
 
 Reference Docs
