@@ -1,5 +1,5 @@
 +++
-date = "2017-05-16T09:30:00+02:00"
+date = "2018-05-18T12:00:00+02:00"
 description = "The properties for the definition of an app"
 title = "App Properties"
 weight = 8
@@ -353,6 +353,16 @@ The path can be absolute or relative to the target directory of the app.
 * Possible Values: an absolute URL with the protocol `http` or `https`
 * Required: `true`
 * App Types: `default`
+* SAPP: `true`
+
+## DownloadHeaders {#DownloadHeaders}
+
+* Description: A dictionary with headers, to send along with the download request
+* Data Type: dictionary
+* Required: `false`
+* Default: empty
+* Example: `User-Agent: Bench`
+* App Type: `default`
 * SAPP: `true`
 
 ## DownloadCookies {#DownloadCookies}
