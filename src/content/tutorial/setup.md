@@ -1,5 +1,5 @@
 +++
-date = "2018-02-09T12:00:00+02:00"
+date = "2018-05-18"
 description = "Install Bench from scratch and initialize the configuration"
 title = "Setting-Up Bench"
 weight = 1
@@ -10,7 +10,7 @@ weight = 1
 [config]: /ref/config
 [select-apps]: /tutorial/apps
 [Bench CLI]: /ref/bench-cli
-[.NET45]: https://www.microsoft.com/download/details.aspx?id=30653
+[.NET462]: https://www.microsoft.com/download/details.aspx?id=53344
 
 Setting up Bench means downloading and extracting the Bench system files,
 initializing the configuration, and setting up the required apps for Bench.
@@ -28,7 +28,7 @@ A shortened version of this tutorial can be found in the
 The following conditions must be fulfilled to use Bench.
 
 * Microsoft Windows 7 or higher
-* [Microsoft .NET 4.5][.NET45]
+* [Microsoft .NET 4.6.2][.NET462]
 * Internet access for HTTP/HTTPS (possibly via proxy, but without credentials)
 * A hard drive or a removable drive with at least 2 GB free memory  
   (How much space Bench requires, depends on the apps you select.)
