@@ -1,5 +1,5 @@
 +++
-date = "2016-07-13"
+date = "2018-05-19"
 description = "The different types of apps in Bench"
 title = "App Types"
 weight = 7
@@ -9,7 +9,8 @@ weight = 7
 
 There are currently the following types of apps:
 
-* Typ [`meta`](#meta): app groups or apps with a fully customized setup process
+* Typ [`group`](#group): app groups, with only a list of dependencies
+* Typ [`meta`](#meta): apps with a fully customized setup process
 * Typ [`default`](#default): Windows executables from a downloaded file, archive, or setup
 * Typ [`node-package`](#node-package): Node.js packages, installable with NPM
 * Typ [`python-package`](#python-package): Python packages for Python 2 and 3 from PyPI, installable with PIP
@@ -18,12 +19,21 @@ There are currently the following types of apps:
 * Typ [`ruby-package`](#ruby-package): Ruby packages, installable with Gem
 * Typ [`nuget-package`](#nuget-package): NuGet packages, installable with NuGet
 
+## Group App {#group}
+An app is a _Group App_ if its [`Typ`][] is set to `group`.
+
+Technically a _Group App_ behaves the same like a [Meta App](#meta),
+but is is supposed to be used as a collection of dependencies only.
+That way, if the _Group App_ is activated, all of its dependencies
+are implicitly activated too.
+They are a way to make the activation process of apps
+more comfortable or flexible.
+
 ## Meta App {#meta}
 An app is a _Meta App_ if its [`Typ`][] is set to `meta`.
 
 A _Meta App_ is an app without an actual program.
-It can be used as a **group** by only referencing other apps as dependencies.
-Or it can be used to fully customize the download and setup process
+It can be used to fully customize the download and setup process
 of an app with custom scripts.
 
 ## Default Windows App {#default}
@@ -39,7 +49,7 @@ even a setup or installer EXE.
 
 A _Default Windows App_ is extracted, and installed simply by copying
 its files into its target directory.
-Optionally some custom scripts can be executed during the setup,
+Optionally some custom scripts can be executed during the setup process,
 to perform some additional configuration for the app.
 
 ## Node.js Package {#node-package}

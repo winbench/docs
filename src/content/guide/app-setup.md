@@ -1,5 +1,5 @@
 +++
-date = "2016-06-22T13:22:33+02:00"
+date = "2018-05-19T12:00:00+02:00"
 description = "The process of installing or upgrading an app"
 title = "App Setup and Upgrade"
 weight = 3
@@ -111,10 +111,16 @@ Therefore, all setup steps &ndash; given that there are some &ndash;
 have to be performed by the custom scripts or hooks, respectively.
 Because _Meta Apps_ do not have resources, downloaded by Bench,
 their setup process consists only of the
-[setup step for the app resources][custom setup script])
+[setup step for the app resources][custom setup script]
 and the [setup step for the environment][custom environment setup script].
 When uninstalling or upgrading _Meta Apps_, the [uninstall step][custom remove]
 is used.
+
+### Group Apps {#typ-group}
+_Group Apps_ behave the same way as [Meta Apps](#typ-meta).
+They exist to make a better destiction between custom apps, which use
+scripts to perform all setup steps, and apps which collect a number of other apps
+as dependencies to form a group for more flexible app activation.
 
 ### Default Apps {#typ-default}
 _Default Apps_ are programs, which consist of at least one file,

@@ -1,5 +1,5 @@
 +++
-date = "2018-02-09T12:00:00+02:00"
+date = "2018-05-19T12:00:00+02:00"
 description = "The activation of apps, app groups and their dependencies"
 title = "App Activation"
 weight = 5
@@ -8,7 +8,7 @@ weight = 5
 [User App Library]: /ref/file-structure/#config-apps
 [Activated Apps]: /ref/file-structure/#config-apps-activated
 [Deactivated Apps]: /ref/file-structure/#config-apps-deactivated
-[Meta App]: /ref/app-types/#meta
+[Group App]: /ref/app-types/#group
 [Bench Dashboard]: /ref/dashbord/
 [Mastersign.Bench.ActivationFile]: https://winbench.org/clr-api/html/T_Mastersign_Bench_ActivationFile.htm
 
@@ -60,9 +60,8 @@ The list of active apps consists of all apps, which are activated
 and are not deactivated.
 
 ## App groups
-Some apps of the type [Meta App][] are app groups.
-That means, they have no app resources and no executables, instead they
-just have a list of dependencies.
+Apps of the type [Group App][] have no app resources and no executables,
+instead they just have a list of dependencies.
 If such an app is activated, all dependencies are activated implicitely.
 
 This pattern is useful to group a number of apps for some scenario under
