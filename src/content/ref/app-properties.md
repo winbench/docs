@@ -151,6 +151,15 @@ the [`LicenseUrl`](/ref/app-properties/#LicenseUrl) defaults to the associated U
 * App Types: all
 * SAPP: `false`
 
+## Tags {#Tags}
+
+* Description: An array with tags.
+* Data Type: list of strings
+* Required: `false`
+* Default: empty
+* App Types: all
+* SAPP: `false`
+
 ## Docs {#Docs}
 
 * Description: A dictionary with documentation URLs for this program
