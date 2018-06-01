@@ -1,11 +1,11 @@
 ﻿+++
-date = "2018-02-12T18:00:11+01:00"
+date = "2018-06-01T15:30:14+02:00"
 description = "The command-line interface: bench.exe"
 title = "Bench CLI"
 weight = 2
 +++
 
-Version: 0.18.0
+Version: 0.20.0
 
 The  _Bench CLI_ allows to interact with a Bench environment on the command line.
 
@@ -51,6 +51,7 @@ Take a look at [the project website](https://winbench.org) for a description of 
 * [ `bench`  `manage`  `update-env`](#cmd_bench-manage-update-env)
 * [ `bench`  `manage`  `upgrade`](#cmd_bench-manage-upgrade)
 * [ `bench`  `project`](#cmd_bench-project)
+* [ `bench`  `search`](#cmd_bench-search)
 * [ `bench`  `transfer`](#cmd_bench-transfer)
 * [ `bench`  `transfer`  `clone`](#cmd_bench-transfer-clone)
 * [ `bench`  `transfer`  `export`](#cmd_bench-transfer-export)
@@ -123,6 +124,9 @@ Manage projects in the Bench environment.
 
 Syntax:  `bench`  `project`  
 
+#### [ `search`,  `s`](#cmd_bench-search)
+Searches for apps.
+
 #### [ `transfer`,  `t`](#cmd_bench-transfer)
 Copy or export this Bench environment.
 
@@ -159,7 +163,7 @@ Syntax:  `bench`  `app`  `download`  _&lt;App ID&gt;_
 #### [ `execute`,  `exec`,  `launch`,  `run`,  `e`](#cmd_bench-app-execute)
 Starts an apps main executable.
 
-Syntax:  `bench`  `app`  `execute`  _&lt;flag&gt;_\*  _&lt;App ID&gt;_  
+Syntax:  `bench`  `app`  `execute`  _&lt;flag&gt;_\*  _&lt;App ID&gt;_ ...  
 
 #### [ `info`,  `i`](#cmd_bench-app-info)
 Shows a detailed, human readable info of an app.
@@ -266,7 +270,7 @@ The  `execute` command starts the main executable of the specified app.
 ### Usage {#cmd_bench-app-execute_usage}
 
 *  `bench`  `app`  `execute`  `-?`
-*  `bench` ( _&lt;flag&gt;_ |  _&lt;option&gt;_)\*  `app`  `execute`  _&lt;flag&gt;_\*  _&lt;App ID&gt;_
+*  `bench` ( _&lt;flag&gt;_ |  _&lt;option&gt;_)\*  `app`  `execute`  _&lt;flag&gt;_\*  _&lt;App ID&gt;_ ...
 
 ### Flags {#cmd_bench-app-execute_flags}
 
@@ -279,6 +283,9 @@ Do not wait for the end of the process.
 Specifies the app to execute.
 
 Expected: An app ID is an alphanumeric string without whitespace.  
+
+### Additional Arguments {#cmd_bench-app-execute_additional_args}
+All additonal arguments are passed as command line arguments to the executable.
 
 ## bench app info {#cmd_bench-app-info}
 Command:  `bench`  `app`  `info`
@@ -548,7 +555,7 @@ Expected: A comma separated list of property names.
 ####  `--set` |  `-s`  _&lt;value&gt;_
 Specifies the set of apps to list.
 
-Expected:  `All` |  `Active` |  `NotActive` |  `Activated` |  `Deactivated` |  `NotSupported` |  `Installed` |  `NotInstalled` |  `Cached` |  `NotCached` |  `DefaultApps` |  `MetaApps` |  `ManagedPackages`  
+Expected:  `All` |  `Active` |  `NotActive` |  `Activated` |  `Deactivated` |  `NotSupported` |  `Installed` |  `NotInstalled` |  `Cached` |  `NotCached` |  `DefaultApps` |  `Groups` |  `MetaApps` |  `ManagedPackages`  
 Default:  `All`  
 
 ####  `--sort-by` |  `-o`  _&lt;value&gt;_
@@ -813,6 +820,34 @@ The  `project` command allows you to perform certain tasks on projects in the Be
 
 *  `bench`  `project`  `-?`
 *  `bench` ( _&lt;flag&gt;_ |  _&lt;option&gt;_)\*  `project`
+
+## bench search {#cmd_bench-search}
+Command:  `bench`  `search`
+
+The  `search` command searches for apps in the Bench environment.
+
+Choose a sub-command to specify the kind of object, you want to list.
+
+### Usage {#cmd_bench-search_usage}
+
+*  `bench`  `search`  `-?`
+*  `bench` ( _&lt;flag&gt;_ |  _&lt;option&gt;_)\*  `search` ( _&lt;flag&gt;_ |  _&lt;option&gt;_)\* ...
+
+### Flags {#cmd_bench-search_flags}
+
+####  `--table` |  `-t`
+Prints the search result as a table. Otherwise only the IDs of found apps are printed.
+
+### Options {#cmd_bench-search_options}
+
+####  `--format` |  `-f`  _&lt;value&gt;_
+Specifies the output format of the listed data.
+
+Expected:  `Plain` |  `Markdown`  
+Default:  `Plain`  
+
+### Additional Arguments {#cmd_bench-search_additional_args}
+All additional arguments are used as search keywords.
 
 ## bench transfer {#cmd_bench-transfer}
 Command:  `bench`  `transfer`
