@@ -1,8 +1,15 @@
 <div>
+  <div class="donation">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="7Y9KCZXR43XSY">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="If you like Bench, consider donating."/>
+    </form>
+  </div>
   <div class="small-print">
     <small>{{ .Site.Copyright | safeHTML }}</small>
   </div>
-  <div><a rel="license" style=""
+  <div class="license-button"><a rel="license" style=""
 href="http://creativecommons.org/licenses/by/4.0/"><img
 alt="Creative Commons Attribution 4.0 International License"
 src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></div>
