@@ -6,6 +6,8 @@ weight = 7
 +++
 
 [`Typ`]: /ref/app-properties/#Typ
+[`Url`]: /ref/app-properties/#Url
+[`ResourceName`]: /ref/app-properties/#ResourceName
 
 There are currently the following types of apps:
 
@@ -87,6 +89,18 @@ This means, a `python-package` implictly activates Python 3 if no Python version
 is explicitly activated, and it is installed in all activated Python versions.
 
 To determine, if a _Python Package_ is already installed, the existence of its package folder in
+`lib\site-packages` in the Python directory is checked.
+
+## Python Wheel {#python-wheel}
+An app is a _Python Wheel_ if its [`Typ`][] property is set to
+`python-wheel`, `python2-wheel`, or `python3-wheel`.
+
+A _Python Wheel_ is downloaded from the [`Url`][] and cached under the [`ResourceName`][].
+The downloaded `.whl` file is then installed via _PIP_ the Python package manager.
+_Python Wheels_ can be defined for Python 2 and Python 3 seperatly, or for both.
+The dependency and activation semantics are identical with [Python Packages](#python-package).
+
+To determine, if a _Python Wheel_ is already installed, the existence of its package folder in
 `lib\site-packages` in the Python directory is checked.
 
 ## Ruby Package {#ruby-package}

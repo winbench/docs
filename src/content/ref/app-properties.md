@@ -98,6 +98,9 @@ and the [`Only64Bit`](#Only64Bit) flag should be set to `true`.
     + `python-package`
     + `python2-package`
     + `python3-package`
+    + `python-wheel`
+    + `python2-wheel`
+    + `python3-wheel`
     + `ruby-package`
     + `nuget-package`
 * Required: `false`
@@ -387,7 +390,7 @@ The path can be absolute or relative to the target directory of the app.
 
 ## ResourceName {#ResourceName}
 
-* Description: The name of the downloaded executable file
+* Description: The name of the downloaded executable or Python wheel file
 * Data Type: string
 * Possible Values: the name of the executable refered to by `Url` &ndash;
   must have a file extension like `*.exe`, `*.bat`, or `*.cmd`
@@ -452,11 +455,11 @@ The existence of the described file is used, to determine if the app is already 
 
 ## PackageName {#PackageName}
 
-* Description: The name of the NPM package to install via NPM
+* Description: The name of the package to install via a package manager
 * Data Type: string
 * Required: `false`
 * Default: the value of the `ID` property in lowercase
-* App Types: `*-package`
+* App Types: `*-package`, `*-wheel`
 * SAPP: `false`
 
 ## Version {#Version}
@@ -466,6 +469,11 @@ The existence of the described file is used, to determine if the app is already 
 * Default: empty
 * App Types: `*-package`
 * SAPP: `true`
+
+This property is also frequently used by default apps or python wheels.
+In this case it behaves like any other user defined app property
+and can be used as variable in other app properties like
+[`ArchiveName`](#ArchiveName) or [`Url`](#Url).
 
 Version Patterns:
 
