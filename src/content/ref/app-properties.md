@@ -1,5 +1,5 @@
 +++
-date = "2018-05-19T12:00:00+02:00"
+date = "2019-03-29"
 description = "The properties for the definition of an app"
 title = "App Properties"
 weight = 8

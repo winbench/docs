@@ -1,5 +1,5 @@
 +++
-date = "2018-05-19"
+date = "2019-03-29"
 description = "The different types of apps in Bench"
 title = "App Types"
 weight = 7
@@ -18,6 +18,9 @@ There are currently the following types of apps:
 * Typ [`python-package`](#python-package): Python packages for Python 2 and 3 from PyPI, installable with PIP
 * Typ [`python2-package`](#python-package): Python packages for Python 2 from PyPI, installable with PIP
 * Typ [`python3-package`](#python-package): Python packages for Python 3 from PyPI, installable with PIP
+* Typ [`python-wheel`](#python-wheel): Python wheels for Python 2 and 3 from a downloaded `.whl` file, installable with PIP
+* Typ [`python2-wheel`](#python-wheel): Python wheels for Python 2 from a downloaded `.whl` file, installable with PIP
+* Typ [`python3-wheel`](#python-wheel): Python wheels for Python 3 from a downloaded `.whl` file, installable with PIP
 * Typ [`ruby-package`](#ruby-package): Ruby packages, installable with Gem
 * Typ [`nuget-package`](#nuget-package): NuGet packages, installable with NuGet
 
