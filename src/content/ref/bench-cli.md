@@ -1,11 +1,11 @@
 ﻿+++
-date = "2018-06-01T15:30:14+02:00"
+date = "2019-03-29T10:37:41+01:00"
 description = "The command-line interface: bench.exe"
 title = "Bench CLI"
 weight = 2
 +++
 
-Version: 0.20.0
+Version: 0.22.0
 
 The  _Bench CLI_ allows to interact with a Bench environment on the command line.
 
@@ -555,7 +555,7 @@ Expected: A comma separated list of property names.
 ####  `--set` |  `-s`  _&lt;value&gt;_
 Specifies the set of apps to list.
 
-Expected:  `All` |  `Active` |  `NotActive` |  `Activated` |  `Deactivated` |  `NotSupported` |  `Installed` |  `NotInstalled` |  `Cached` |  `NotCached` |  `DefaultApps` |  `Groups` |  `MetaApps` |  `ManagedPackages`  
+Expected:  `All` |  `Active` |  `NotActive` |  `Activated` |  `Deactivated` |  `NotSupported` |  `Installed` |  `NotInstalled` |  `Cached` |  `NotCached` |  `DefaultApps` |  `Groups` |  `MetaApps` |  `ManagedPackages` |  `ManagedPackagesFromRemote`  
 Default:  `All`  
 
 ####  `--sort-by` |  `-o`  _&lt;value&gt;_
