@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "gulp-uglify": "^3.0.2",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.1.2",
     "purecss": "^1.0.1"
   }
 }
